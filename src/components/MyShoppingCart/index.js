@@ -1,8 +1,8 @@
 import React from 'react';
 
 function MyShoppingCart(props) {
-  const cartItems = props.cartList.map((record) =>
-    <li onClick={() => { handClick(record) }}>{`${record.name} - $ ${record.price}`}</li>
+  const cartItems = props.cartList.map((record, index) =>
+    <li key={index} onClick={() => { handClick(record) }}>{`${record.name} - $ ${record.price}`}</li>
   )
 
   const handClick = (item) => {
