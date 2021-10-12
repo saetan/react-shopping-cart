@@ -7,7 +7,7 @@ function MyShoppingCart(props) {
 
   const handClick = (item) => {
     const newCart = props.cartList.filter(word => item.name !== word.name);
-    props.setCart(newCart);
+    props.setCart(newCart)
   }
 
   return (
