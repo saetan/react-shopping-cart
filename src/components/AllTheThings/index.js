@@ -2,8 +2,8 @@ import React from 'react';
 
 function AllTheThings(props) {
 
-  const productList = props.products.map((record) =>
-    <li key={record.name} onClick={() => { handClick(record) }}>{`${record.name} - $ ${record.price}`}</li>
+  const productList = props.products.map((record, index) =>
+    <li key={index} onClick={() => { handClick(record) }}>{`${record.name} - $ ${record.price}`}</li>
   );
 
   const handClick = (item) => {
